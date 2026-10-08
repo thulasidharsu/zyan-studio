@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zayn Studio - Bespoke Wall Art & Decor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark: #1b1c1a;
+      --cream: #fbf9f5;
+      --light-beige: #efeeea;
+      --brown: #927055;
+      --gray: #494740;
+      --divider: rgba(203, 198, 189, 0.6);
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 68px;
+      font-weight: 400;
+      line-height: 76px;
+      letter-spacing: -1.36px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 60px;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .tagline {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2.75px;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+
+    .label-sm {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+
+    .body-light {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 30px;
+      color: var(--gray);
+    }
+
+    /* ========== BUTTONS & LINKS ========== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 9999px;
+      border: none;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.44px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-dark {
+      background: var(--dark);
+      color: white;
+      box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-dark:hover {
+      background: #2a2927;
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      background: var(--light-beige);
+      color: var(--dark);
+    }
+
+    .btn-light:hover {
+      background: #e8e4da;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--dark);
+      border: 1px solid var(--divider);
+      padding: 14px 30px;
+    }
+
+    .btn-outline:hover {
+      background: var(--light-beige);
+    }
+
+    /* ========== BADGE ========== */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--light-beige);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      width: fit-content;
+      margin-bottom: 24px;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--brown);
+      border-radius: 50%;
+    }
+
+    /* ========== DIVIDER ========== */
+    .divider {
+      height: 1px;
+      background: var(--divider);
+      margin: 48px 0;
+    }
+
+    /* ========== SECTION SPACING ========== */
+    section {
+      padding: 96px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* ========== HEADER & NAVIGATION ========== */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(251, 249, 245, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 80px;
+    }
+
+    .logo {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--dark);
+      text-decoration: none;
+    }
+
+    nav a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: var(--gray);
+      text-decoration: none;
+      margin: 0 24px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--brown);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0;
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      min-height: 800px;
+      padding: 112px 80px 0;
+    }
+
+    .hero-left h1 {
+      margin-bottom: 32px;
+      margin-top: 24px;
+    }
+
+    .hero-left p {
+      margin-bottom: 48px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 25px;
+      border-top: 1px solid var(--divider);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-right {
+      position: relative;
+      height: 650px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 570px;
+      background: linear-gradient(180deg, rgba(25, 24, 22, 0) 0%, rgba(25, 24, 22, 0.3) 100%);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 24px;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #e8e4da 0%, #d9d4ca 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: rgba(251, 249, 245, 0.95);
+      backdrop-filter: blur(6px);
+      padding: 16px 20px;
+      border-radius: 12px;
+      box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+      width: 220px;
+      right: -32px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .floating-card .label-sm {
+      color: var(--brown);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .floating-card h4 {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .floating-card p {
+      font-size: 11px;
+      color: var(--gray);
+    }
+
+    /* ========== PROMISE SECTION ========== */
+    .promise {
+      background: white;
+    }
+
+    .promise-intro {
+      max-width: 1120px;
+      margin: 0 auto 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .promise-intro-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .promise-intro-left .tagline {
+      display: inline-block;
+    }
+
+    .promise-intro-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .promise-intro-right p {
+      font-size: 16px;
+      line-height: 26px;
+      color: var(--gray);
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .pillar {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pillar h3 {
+      margin: 52px 0 50px;
+      font-size: 22px;
+    }
+
+    .pillar p {
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--gray);
+      margin-bottom: 80px;
+    }
+
+    .pillar-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      color: var(--brown);
+      text-decoration: none;
+      margin-top: auto;
+      padding-top: 32px;
+      border-top: 1px solid var(--divider);
+    }
+
+    /* ========== COLLECTIONS SECTION ========== */
+    .collections {
+      background: white;
+    }
+
+    .collections-intro {
+      max-width: 1120px;
+      margin: 0 auto 80px;
+    }
+
+    .collections-intro .tagline {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .collection-card {
+      padding: 24px;
+      background: var(--cream);
+      border-radius: 8px;
+    }
+
+    .collection-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .collection-number {
+      width: 32px;
+      height: 32px;
+      background: var(--light-beige);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .collection-card h3 {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+
+    .collection-card p {
+      font-size: 13px;
+      line-height: 20px;
+      color: var(--gray);
+      margin-bottom: 32px;
+    }
+
+    .collection-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brown);
+      text-decoration: none;
+      padding-top: 32px;
+      border-top: 1px solid var(--divider);
+    }
+
+    /* ========== FEATURED PRODUCTS ========== */
+    .featured {
+      background: var(--cream);
+    }
+
+    .featured-intro {
+      max-width: 1120px;
+      margin: 0 auto 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .featured-intro-left h2 {
+      font-size: 48px;
+    }
+
+    .featured-intro-right p {
+      font-size: 15px;
+      line-height: 24px;
+      color: var(--gray);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 440px;
+      background: linear-gradient(135deg, #e8e4da 0%, #d9d4ca 100%);
+      border-radius: 8px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray);
+      position: relative;
+    }
+
+    .product-details {
+      padding: 0 24px;
+    }
+
+    .product-details h3 {
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+
+    .product-details .price {
+      font-size: 12px;
+      color: var(--brown);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .product-specs {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 20px;
+    }
+
+    /* ========== CUSTOM ORDER PROCESS ========== */
+    .process {
+      background: white;
+      padding-top: 112px;
+      padding-bottom: 96px;
+    }
+
+    .process-intro {
+      text-align: center;
+      max-width: 768px;
+      margin: 0 auto 80px;
+    }
+
+    .process-intro .tagline {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .process-intro h2 {
+      margin-bottom: 40px;
+      font-size: 52px;
+    }
+
+    .process-intro p {
+      font-size: 16px;
+      line-height: 24px;
+      color: var(--gray);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: 1120px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 71px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--divider);
+      z-index: 1;
+    }
+
+    .step {
+      background: white;
+      padding: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--brown);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 auto 24px;
+    }
+
+    .step h4 {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .step p {
+      font-size: 13px;
+      line-height: 22px;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    .process-cta {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    /* ========== ABOUT / STORY ========== */
+    .story {
+      background: var(--cream);
+      padding: 96px 80px;
+    }
+
+    .story-content {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
+
+    .story-content .tagline {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .story-content h2 {
+      margin-bottom: 48px;
+      max-width: 864px;
+    }
+
+    .story-intro {
+      max-width: 672px;
+      margin-bottom: 48px;
+      font-size: 15px;
+      line-height: 24px;
+      color: var(--gray);
+    }
+
+    .quote-block {
+      background: white;
+      padding: 80px 60px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .quote-mark {
+      font-size: 48px;
+      color: var(--brown);
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .quote-text {
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--dark);
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .quote-author {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--brown);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .quote-author::before,
+    .quote-author::after {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--divider);
+    }
+
+    /* ========== FAQ SECTION ========== */
+    .faq {
+      background: white;
+      padding: 96px 192px;
+    }
+
+    .faq-intro {
+      text-align: center;
+      max-width: 736px;
+      margin: 0 auto 80px;
+    }
+
+    .faq-intro .tagline {
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+
+    .faq-intro h2 {
+      margin-bottom: 32px;
+    }
+
+    .faq-intro p {
+      font-size: 14px;
+      line-height: 20px;
+      color: var(--gray);
+    }
+
+    .faq-list {
+      max-width: 736px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      padding: 24px;
+      border-bottom: 1px solid var(--divider);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item:hover {
+      background: var(--light-beige);
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .faq-icon {
+      font-size: 16px;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--gray);
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* ========== CONTACT SECTION ========== */
+    .contact {
+      background: var(--cream);
+      padding: 112px 80px;
+    }
+
+    .contact-wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .contact-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .contact-left .tagline {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .contact-left h2 {
+      margin-bottom: 40px;
+      font-size: 56px;
+    }
+
+    .contact-intro {
+      font-size: 15px;
+      line-height: 24px;
+      color: var(--gray);
+      margin-bottom: 48px;
+    }
+
+    .contact-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .channel {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px;
+      background: white;
+      border-radius: 8px;
+    }
+
+    .channel-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--light-beige);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .channel-details h4 {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .channel-details p {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    .contact-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: white;
+      padding: 48px;
+      border-radius: 8px;
+    }
+
+    .location {
+      margin-bottom: 48px;
+    }
+
+    .location-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+
+    .location-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--brown);
+      border-radius: 50%;
+    }
+
+    .location h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .location p {
+      font-size: 13px;
+      line-height: 20px;
+      color: var(--gray);
+    }
+
+    .location-divider {
+      height: 1px;
+      background: var(--divider);
+      margin: 24px 0;
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .detail-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .detail-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .detail-value {
+      font-size: 13px;
+      line-height: 20px;
+      color: var(--dark);
+    }
+
+    /* ========== FORM STYLES ========== */
+    .form-section {
+      background: white;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+
+    .form-intro {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .form-intro h2 {
+      margin-bottom: 16px;
+    }
+
+    .form-intro p {
+      font-size: 15px;
+      line-height: 24px;
+      color: var(--gray);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 16px 16px;
+      border: 1px solid var(--divider);
+      border-radius: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 14px;
+      color: var(--dark);
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--brown);
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 16px 32px;
+      margin-top: 32px;
+      background: var(--dark);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.44px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .form-submit:hover {
+      background: #2a2927;
+      transform: translateY(-2px);
+    }
+
+    .form-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .form-message {
+      margin-top: 16px;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      text-align: center;
+      display: none;
+    }
+
+    .form-message.success {
+      background: #d4edda;
+      color: #155724;
+      display: block;
+    }
+
+    .form-message.error {
+      background: #f8d7da;
+      color: #721c24;
+      display: block;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 81px 80px;
+    }
+
+    .footer-grid {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1.5fr;
+      gap: 80px;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-logo {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-about {
+      font-size: 13px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-section h4 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .footer-bottom-links a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: white;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 40px;
+      }
+
+      h1 {
+        font-size: 42px;
+        line-height: 50px;
+      }
+
+      h2 {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 80px 40px 0;
+        min-height: auto;
+      }
+
+      .hero-right {
+        height: 400px;
+      }
+
+      .hero-image {
+        height: 300px;
+      }
+
+      .floating-card {
+        position: static;
+        width: 100%;
+        transform: none;
+      }
+
+      .pillars {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .collections-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .faq {
+        padding: 96px 40px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      h2 {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      .hero {
+        padding: 60px 20px 0;
+      }
+
+      .pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .steps::before {
+        display: none;
+      }
+
+      .quote-author {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <a href="#" class="logo">⬥ ZAYN STUDIO</a>
+      <nav class="nav-links">
+        <a href="#collections">Collections</a>
+        <a href="#featured">Featured</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span class="tagline">✦ Art • Design • Decor</span>
+      </div>
+      <h1>Every piece begins with an idea.</h1>
+      <p class="body-light">We turn ideas into distinctive wall art, personalised names, premium frames and decor pieces — crafted to make your space feel truly yours.</p>
+      <div class="hero-buttons">
+        <a href="#collections" class="btn btn-dark">Explore Collections →</a>
+        <a href="#contact" class="btn btn-light">Create a Custom Piece ↗</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span style="color: var(--brown);">⬥</span>
+          <span>COIMBATORE • INDIA</span>
+        </div>
+        <div class="hero-meta-item">
+          SCROLL TO EXPLORE ↓
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-image">
+        <div class="image-placeholder">Architectural Luxury Interior</div>
+      </div>
+      <div class="floating-card">
+        <span class="label-sm">⬥ Custom Atelier</span>
+        <h4>Bespoke In Every Dimension</h4>
+        <p>Acrylic • MDF • Brass • Layered Art</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMISE SECTION -->
+  <section class="promise">
+    <div class="container">
+      <div class="promise-intro">
+        <div class="promise-intro-left">
+          <span class="tagline">01 — Studio Promise</span>
+          <h2>Decor that carries a little bit of you.</h2>
+        </div>
+        <div class="promise-intro-right">
+          <p>Every element we create reflects a commitment to thoughtful design, personalised details, premium finishes, and careful craftsmanship. This is what sets Zayn Studio apart.</p>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <div style="font-size: 44px; color: var(--brown);">①</div>
+          <h3>Thoughtful Design</h3>
+          <p>Every curve, cut, and relief layer is conceptualised to harmonize with contemporary architecture and refined interior aesthetics.</p>
+          <a href="#" class="pillar-link">Learn More ↗</a>
+        </div>
+        <div class="pillar">
+          <div style="font-size: 44px; color: var(--brown);">②</div>
+          <h3>Personalised Details</h3>
+          <p>Tailored typography, family names, bespoke motifs, and customized proportions created exclusively around your story.</p>
+          <a href="#" class="pillar-link">Learn More ↗</a>
+        </div>
+        <div class="pillar">
+          <div style="font-size: 44px; color: var(--brown);">③</div>
+          <h3>Premium Finish</h3>
+          <p>Precision laser-cut acrylics, textured MDF, brushed metallics, and curated coats engineered for durability and tactile richness.</p>
+          <a href="#" class="pillar-link">Learn More ↗</a>
+        </div>
+        <div class="pillar">
+          <div style="font-size: 44px; color: var(--brown);">④</div>
+          <h3>Made with Care</h3>
+          <p>Hand-inspected in our Coimbatore studio, delicately packaged, and delivered ready to bring distinction to your living or workspace.</p>
+          <a href="#" class="pillar-link">Learn More ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS SECTION -->
+  <section class="collections" id="collections">
+    <div class="container">
+      <div class="collections-intro">
+        <span class="tagline">02 — Collections</span>
+        <h2>Find your signature piece.</h2>
+        <p style="font-size: 15px; line-height: 24px; color: var(--gray); margin-top: 16px;">Explore curated design families designed to complement contemporary living, personal milestones, and sophisticated workspaces.</p>
+      </div>
+
+      <div class="collections-grid">
+        <div class="collection-card">
+          <div class="collection-header">
+            <span class="tagline">Collection 01</span>
+            <div class="collection-number">①</div>
+          </div>
+          <h3>Name & Letter Decor</h3>
+          <p>3D names, family names, couple names and kids names. Precision typography crafted with layered relief and bespoke palettes.</p>
+          <a href="#contact" class="collection-link">Enquire ↗</a>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-header">
+            <span class="tagline">Collection 02</span>
+            <div class="collection-number">②</div>
+          </div>
+          <h3>Wall Art</h3>
+          <p>Abstract, geometric, nature and Islamic-inspired patterns. Dimensional compositions that catch ambient shadows beautifully.</p>
+          <a href="#contact" class="collection-link">Enquire ↗</a>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-header">
+            <span class="tagline">Collection 03</span>
+            <div class="collection-number">③</div>
+          </div>
+          <h3>Frame Collection</h3>
+          <p>Layered frames, MDF + acrylic and premium statement frames made to enshrine art, portraits, and significant phrases.</p>
+          <a href="#contact" class="collection-link">Enquire ↗</a>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-header">
+            <span class="tagline">Collection 04</span>
+            <div class="collection-number">④</div>
+          </div>
+          <h3>Decor Collection</h3>
+          <p>Wall panels, decorative sculptural accents, custom mirrors and display shelves crafted with quiet artisanal elegance.</p>
+          <a href="#contact" class="collection-link">Enquire ↗</a>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-header">
+            <span class="tagline">Collection 05</span>
+            <div class="collection-number">⑤</div>
+          </div>
+          <h3>Custom Designs</h3>
+          <p>Share your idea, reference, name or logo. We translate your sketches and conceptual moodboards into physical reality.</p>
+          <a href="#contact" class="collection-link">Enquire ↗</a>
+        </div>
+
+        <div class="collection-card">
+          <div class="collection-header">
+            <span class="tagline">Collection 06</span>
+            <div class="collection-number">⑥</div>
+          </div>
+          <h3>Corporate / Office Decor</h3>
+          <p>Professional wall statements, reception signs, and architectural branding decor crafted for upscale studios and workspaces.</p>
+          <a href="#contact" class="collection-link">Enquire ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="featured" id="featured">
+    <div class="container">
+      <div class="featured-intro">
+        <div class="featured-intro-left">
+          <span class="tagline">03 — Curated Catalogue</span>
+          <h2>Pieces made to stand out.</h2>
+        </div>
+        <div class="featured-intro-right">
+          <p>Each piece in our signature collection represents the pinnacle of our craftsmanship—a harmonious blend of conceptual depth, material precision, and artisanal execution.</p>
+        </div>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">Organic Abstract Relief</div>
+          <div class="product-details">
+            <h3>Organic Abstract</h3>
+            <div class="price">$280 - $450</div>
+            <div class="product-specs">Multi-layered architectural curves • Neutral tones • Bespoke sizing available</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">Custom 3D Name Signage</div>
+          <div class="product-details">
+            <h3>Custom 3D Name</h3>
+            <div class="price">$200 - $600</div>
+            <div class="product-specs">Layered relief lettering • Family / couple / kids names • Custom finishes</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">Layered Premium Frame</div>
+          <div class="product-details">
+            <h3>Layered Premium Frame</h3>
+            <div class="price">$320 - $520</div>
+            <div class="product-specs">Engineered MDF & cast acrylic • Gallery-depth silhouette</div>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">Modern Wall Decor Installation</div>
+          <div class="product-details">
+            <h3>Modern Wall Decor</h3>
+            <div class="price">$450 - $950</div>
+            <div class="product-specs">Sculptural wall paneling • Minimalist geometric accents • Statement presence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM ORDER PROCESS -->
+  <section class="process" id="process">
+    <div class="process-intro">
+      <span class="tagline">04 — How It Works</span>
+      <h2>The Zayn Studio Custom Process</h2>
+      <p>Your vision becomes reality through our four-step collaborative journey. From conceptualisation to delivery.</p>
+    </div>
+
+    <div class="container">
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Conceptualise</h4>
+          <p>Share your idea, dimensions, reference images or mood board. We discuss materials, finishes, colour palettes and timelines.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Design & Plan</h4>
+          <p>Our studio team creates detailed renderings. We refine proportions, finalise materials, and prepare precision specifications.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Craft & Create</h4>
+          <p>Handmade in our Coimbatore atelier. Laser-cutting, layering, finishing and hand-inspection ensure every piece is flawless.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>Deliver</h4>
+          <p>Delicately packaged and shipped. We provide installation guidance and lifetime support for any piece from Zayn Studio.</p>
+        </div>
+      </div>
+
+      <div class="process-cta">
+        <a href="#contact" class="btn btn-dark">Start Your Custom Piece →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND STORY -->
+  <section class="story">
+    <div class="story-content">
+      <span class="tagline">05 — Our Story</span>
+      <h2>Every piece carries intention.</h2>
+      <p class="story-intro">At Zayn Studio, we believe that home is where personality lives. We've built a practice around creating bespoke decor that doesn't just fill a wall—it tells your story. Founded in Coimbatore, our atelier combines contemporary design thinking with artisanal craftsmanship to produce pieces that matter.</p>
+
+      <div class="quote-block">
+        <div class="quote-mark">"</div>
+        <p class="quote-text">Good design is invisible. It works so well that it becomes part of your life. That's what we create.</p>
+        <div class="quote-author">
+          The Zayn Studio Collective
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq" id="faq">
+    <div class="faq-intro">
+      <span class="tagline">Questions?</span>
+      <h2>Frequently Asked</h2>
+      <p>Everything you need to know about our process, materials, and custom orders.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What materials do you use?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">We work with premium laser-cut acrylics, engineered MDF, brass hardware, linen, travertine, and carefully selected finishing materials. Every material is chosen for both durability and aesthetic contribution.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How long does a custom order take?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Custom pieces typically take 3-4 weeks from final approval to delivery. Rush timelines are available for an additional fee. We'll provide a precise timeline during the conceptualisation phase.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you ship internationally?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Currently, we ship across India with careful packaging and tracking. International orders are handled on a case-by-case basis. Contact us directly to discuss your location.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What's your refund policy?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Since all pieces are custom-made, we work to perfect your design before production. We stand behind our work with a quality guarantee and offer replacements for any manufacturing issues.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / FORM SECTION -->
+  <section class="contact" id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-left">
+        <span class="tagline">06 — Contact</span>
+        <h2>Let's create something beautiful.</h2>
+        <p class="contact-intro">Every order at Zayn Studio is handled personally. Reach out with your idea, dimension requirements, or catalogue product code, and we will guide you through the process.</p>
+
+        <div class="contact-channels">
+          <div class="channel">
+            <div class="channel-icon">💬</div>
+            <div class="channel-details">
+              <h4>WhatsApp Channel</h4>
+              <p>Direct messaging for quick enquiries and updates</p>
+            </div>
+          </div>
+          <div class="channel">
+            <div class="channel-icon">📞</div>
+            <div class="channel-details">
+              <h4>Call Us</h4>
+              <p>+91 90257 54814 • Mon–Sat, 10AM–6PM IST</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="location">
+          <div class="location-title">
+            <span class="location-dot"></span>
+            <span>Studio Atelier</span>
+          </div>
+          <h3>Coimbatore, Tamil Nadu, India</h3>
+          <p>Custom handcrafted pieces made to order and shipped across India. Orders are initiated via direct consultation to guarantee material and dimensional perfection.</p>
+        </div>
+
+        <div class="location-divider"></div>
+
+        <div class="contact-details">
+          <div class="detail-group">
+            <div class="detail-label">📍 Address</div>
+            <div class="detail-value">Zayn Studio Atelier<br>Coimbatore, TN 641001</div>
+          </div>
+          <div class="detail-group">
+            <div class="detail-label">📱 Contact</div>
+            <div class="detail-value">WhatsApp: +91 93422 52597<br>Call: +91 90257 54814</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="form-section">
+    <div class="form-container">
+      <div class="form-intro">
+        <h2>Get in Touch</h2>
+        <p>Fill out this form to start your custom piece or enquire about our collections. We'll respond within 24 hours.</p>
+      </div>
+
+      <form id="enquiryForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <button type="submit" class="form-submit">Send Enquiry</button>
+        <div id="formMessage" class="form-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span>⬥</span>
+          <span>Zayn Studio</span>
+        </div>
+        <p class="footer-about">Bespoke wall art, personalised decor, and premium frames crafted in our Coimbatore atelier. Every piece carries intention.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Collections</h4>
+        <div class="footer-links">
+          <a href="#collections">Name & Letter Decor</a>
+          <a href="#collections">Dimensional Wall Art</a>
+          <a href="#collections">Layered Frames</a>
+          <a href="#collections">Decor Panels & Accents</a>
+          <a href="#collections">Corporate Workspaces</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4>Studio Atelier</h4>
+        <div class="footer-links">
+          <a href="#">Coimbatore, Tamil Nadu, India</a>
+          <a href="#">WhatsApp: +91 93422 52597</a>
+          <a href="#">Call: +91 90257 54814</a>
+          <a href="#contact">ENQUIRE FOR BESPOKE ORDER →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Zayn Studio. All pieces handcrafted with care.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const APPSCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx_edFYLaS2ZrYLFRAwRFXzcIlUdU9y25kKkCg1v831rOAFR_O609UiS2A60LyhxKbaeA/exec';
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+
+    // Form Submission
+    document.getElementById('enquiryForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const submitBtn = e.target.querySelector('.form-submit');
+      const messageDiv = document.getElementById('formMessage');
+
+      // Validate
+      if (!name || !email || !phone) {
+        showError('Please fill in all fields', messageDiv);
+        return;
+      }
+
+      // Disable button
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      // Build URL with query parameters
+      const url = APPSCRIPT_URL + '?' + new URLSearchParams({ name, email, phone });
+
+      try {
+        // Use GET with no-cors mode
+        await fetch(url, {
+          method: 'GET',
+          mode: 'no-cors'
+        });
+
+        // Assume success - don't check response (opaque response)
+        showSuccess(messageDiv);
+        document.getElementById('enquiryForm').reset();
+        submitBtn.textContent = 'Send Enquiry';
+        submitBtn.disabled = false;
+
+      } catch (error) {
+        showError('Connection error. Please try again.', messageDiv);
+        submitBtn.textContent = 'Send Enquiry';
+        submitBtn.disabled = false;
+      }
+    });
+
+    function showSuccess(messageDiv) {
+      messageDiv.textContent = '✓ Thank you! Your enquiry has been sent. We\'ll respond within 24 hours.';
+      messageDiv.className = 'form-message success';
+      setTimeout(() => {
+        messageDiv.className = 'form-message';
+      }, 5000);
+    }
+
+    function showError(message, messageDiv) {
+      messageDiv.textContent = '✗ ' + message;
+      messageDiv.className = 'form-message error';
+      setTimeout(() => {
+        messageDiv.className = 'form-message';
+      }, 5000);
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href !== '#' && href !== '#collections' && href !== '#featured' && href !== '#process' && href !== '#faq' && href !== '#contact') {
+          return;
+        }
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
